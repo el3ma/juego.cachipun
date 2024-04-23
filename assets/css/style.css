@@ -17,12 +17,24 @@ body {
 
 .titulo {
     font-size: 80px;
+
+    @media (max-width: 768px) {
+        font-size: 65px;
+    }
 }
 
 .contenedor__subtitulo {
     display: flex;
     justify-content: center;
     padding: 10px 0;
+}
+
+.subtitulo{
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+        text-align: center;
+    }
 }
 
 .contenedor__botones {
@@ -45,11 +57,21 @@ body {
         background-color: #535C91;
         color: aliceblue;
     }
+
+    @media (max-width: 768px) {
+        font-size: 15px;
+        width: 90px;
+        height: 90px;
+    }
 }
 
 
 .manos {
     font-size: 65px;
+
+    @media (max-width: 768px) {
+        font-size: 45px;
+    }
 }
 
 .contenedor__elecciones {
@@ -57,6 +79,13 @@ body {
     justify-content: center;
     padding: 15px 0;
     gap: 150px;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 5px;
+    }
 }
 
 .contenedor__elecciones-centrar {
@@ -87,6 +116,9 @@ body {
     align-items: center;
     justify-content: center;
     height: 100px;
+    @media (max-width: 768px) {
+        height: 150px;
+    }
     
 }
 
@@ -100,8 +132,13 @@ body {
 }
 
 #resultado {
-    font-size: 35px;
+    font-size: 55px;
     font-weight: 800;
+
+    @media (max-width: 768px) {
+        font-size: 40px;
+        text-align: center;
+    }
 }
 
 .contador__jugadas{
@@ -109,4 +146,16 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: start;
+
+    @media (max-width: 768px) {
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+}
+
+.footer__text{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 50px;
 }
