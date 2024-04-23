@@ -7,6 +7,7 @@ let eleccionMaquina = document.getElementById("eleccionMaquina");
 let ganados = document.getElementById("ganados");
 let perdidos = document.getElementById("perdidos");
 let empatados = document.getElementById("empatados");
+let totales = document.getElementById("totales");
 let opciones = ["Piedra", "Papel", "Tijera"];
 
 
@@ -26,14 +27,17 @@ function main(){
     function opcionesResultado(opcionUsuario, opcionMaquina){
         if(opcionUsuario == opcionMaquina){
             juegosEmpatados ++
+            juegosTotales ++
             return 'Esto es un empate'
         }else if((opcionUsuario == "Piedra" && opcionMaquina == "Tijera") || 
                 (opcionUsuario == "Papel" && opcionMaquina == "Piedra") || 
                 (opcionUsuario == "Tijera" && opcionMaquina == "Papel")){
                     juegosGanados ++
+                    juegosTotales ++
                 return 'Ganaste!'
         }else{
             juegosPerdidos ++
+            juegosTotales ++
             return 'Perdiste esta vez'
         }
             
@@ -43,6 +47,7 @@ function main(){
         ganados.innerText = `${juegosGanados}`;
         perdidos.innerText = `${juegosPerdidos}`;
         empatados.innerText = `${juegosEmpatados}`;
+        totales.innerText = `${juegosTotales}`;
     }
 
     function juegoResultado(resultadoJugada, opcionUsuario, opcionMaquina){
@@ -56,7 +61,7 @@ function main(){
         const opcionMaquina = jugadaMaquina();
         const resultadoJugada = opcionesResultado(opcionUsuario, opcionMaquina);
         juegoResultado(resultadoJugada, opcionUsuario, opcionMaquina);
-        contadorJuegos(juegosGanados, juegosPerdidos, juegosEmpatados)
+        contadorJuegos(juegosGanados, juegosPerdidos, juegosEmpatados, juegosTotales)
     });
 
     btnPapel.addEventListener("click", function(){
@@ -64,7 +69,7 @@ function main(){
         const opcionMaquina = jugadaMaquina();
         const resultadoJugada = opcionesResultado(opcionUsuario, opcionMaquina);
         juegoResultado(resultadoJugada, opcionUsuario, opcionMaquina);
-        contadorJuegos(juegosGanados, juegosPerdidos, juegosEmpatados)
+        contadorJuegos(juegosGanados, juegosPerdidos, juegosEmpatados, juegosTotales)
     });
 
     btnTijera.addEventListener("click", function(){
@@ -72,7 +77,7 @@ function main(){
         const opcionMaquina = jugadaMaquina();
         const resultadoJugada = opcionesResultado(opcionUsuario, opcionMaquina);
         juegoResultado(resultadoJugada, opcionUsuario, opcionMaquina);
-        contadorJuegos(juegosGanados, juegosPerdidos, juegosEmpatados)
+        contadorJuegos(juegosGanados, juegosPerdidos, juegosEmpatados, juegosTotales)
     })
 }
 
