@@ -6,6 +6,7 @@
 
 body{
     font-family: 'Roboto mono', monospace;
+    color: #070F2B;
 }
 
 .contenedor__titulo{
@@ -16,4 +17,52 @@ body{
 
 .titulo{
     font-size: 80px;
+}
+
+.contenedor__subtitulo{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.contenedor__botones{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.boton{
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    border: none;
+    color: #1B1A55;
+    background-color: #9290C3;
+    font-size: 20px;
+
+    &:hover{
+        background-color: #535C91;
+        color: aliceblue;
+    }
+}
+
+
+.manos{
+    font-size: 65px;
+}
+
+.contenedor__elecciones{
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    gap: 150px;
+}
+
+.box__eleccion{
+    width: 150px;
+    height: 55px;
+    border: 3px solid #1B1A55;
+    border-radius: 10px;
+    margin-top: 5px;
 }

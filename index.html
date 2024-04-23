@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cachipun</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
@@ -20,29 +22,40 @@
     </header>
 
     <section>
-        <div class="">
-            <p>Elige una alternativa para jugar contra la maquina.</p>
-            <div>
+        <div class="contenedor__subtitulo">
+            <h2 class="">Elige una alternativa para jugar contra la maquina.</h2>
+        </div>
+            <div class="contenedor__botones">
                 <div>
-                    <button id="piedra">Piedra</button>
+                    <button class="boton" id="piedra"><i class="manos fa-solid fa-hand-back-fist"></i> <br>Piedra</button>
                 </div>
                 <div>
-                    <button id="papel">Papel</button>
+                    
+                    <button class="boton" id="papel"><i class="manos fa-solid fa-hand"></i> <br> Papel </i></button>
                 </div>
                 <div>
-                    <button id="tijera">Tijera</button>
+                    <button class="boton" id="tijera"><i class="manos fa-solid fa-hand-scissors"></i> <br>Tijera</button>
                 </div>
             </div>
-        </div>
+        
     </section>
 
     <section>
-        <div>
-            <p>Tu elección: <span id="eleccionUsuario"></span></p>
+        <div class="contenedor__elecciones">
+            <div>
+                <p>Tu elección:</p>
+                <div class="box__eleccion">
+                    <p id="eleccionUsuario"></p>
+                </div>
+            </div>
+            <div>
+                <p>Elección máquina:</p>
+                <div class="box__eleccion">
+                    <p id="eleccionMaquina"></p>
+                </div>
+            </div>
         </div>
-        <div>
-            <p>Elección máquina: <span id="eleccionMaquina"></span></p>
-        </div>
+       
         <div>
             <p id="resultado"></p>
         </div>
